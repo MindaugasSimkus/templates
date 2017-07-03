@@ -13,13 +13,18 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 $templates = ["green", "orange", "pink", "yellow",];
 
+if (isset($_POST['username'])) {
+	$title = "Čia lankosi " . $_POST['username'];
+	$_SESSION['user'] = $_POST['username'];
+} elseif (isset($_POST['username'])) {
+	$title = "Čia lankosi " . $_POST['username'];
+}
 
 
-
-if (isset($_GET['t'])) {
-	$template_name = $_GET['t'];
-	$_SESSION['session_template'] = $_GET['t'];
-} else if ($_SESSION['session_template']) {
+if (isset($_POST['t'])) {
+	$template_name = $_POST['t'];
+	$_SESSION['session_template'] = $_POST['t'];
+} else if (isset($_SESSION['session_template'])) {
 	$template_name = $_SESSION['session_template'];
 } else {
 	$template_name = $templates[0];
@@ -27,5 +32,6 @@ if (isset($_GET['t'])) {
 
 
 include 'templates/' . $template_name . '.php';
+
 
 ?>

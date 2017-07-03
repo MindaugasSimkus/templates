@@ -26,7 +26,11 @@
         			<?= $content; ?>
         		</div>  
             <div class="col-sm-4">
-              <?php include "inc/template_selector.php";  ?>
+              <?php 
+              include "inc/template_selector.php";  
+              include "inc/username.php";
+              include "inc/variables.php";
+              ?> 
             </div>           		
         	</div>
         	<div class="row">

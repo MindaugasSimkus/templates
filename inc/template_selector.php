@@ -1,4 +1,4 @@
-<form action="">
+<form action="" method="POST" class="form-inline">
 	<select name="t" class="form-control">
 		<?php 
 			foreach ($templates as $template) {
@@ -6,5 +6,5 @@
 			}
 		?>
 	</select>
-	<button type="submit">Change</button>	
+	<button class="btn" type="submit">Change</button>	
 </form>

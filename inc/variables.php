@@ -1,0 +1,18 @@
+<h4>Session</h4>
+<pre>
+	<?php 
+	print_r($_SESSION);
+	?>
+</pre>
+<h4>GET</h4>
+<pre>
+	<?php 
+	print_r($_GET);
+	?>
+</pre>
+<h4>POST</h4>
+<pre>
+	<?php 
+	print_r($_POST);
+	?>
+</pre>
